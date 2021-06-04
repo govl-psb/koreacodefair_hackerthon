@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Cam Video</title>
+    <script
+      src="https://kit.fontawesome.com/1a2b716621.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./public/stylesheets/main.css">
+</head>
+<body>
+    <h1 class="yesOrNo">
+        <% if(smile){ %> 웃으셨습니다. ^^ <% } else{ %> 웃지 않으셨습니다. ㅠㅠ <% } %>
+    </h1>
+    <img src= <%=img %> alt="" width="640" height="480">
+    <div class="result">
+      <div class="smile_total">
+        <h2>누적 웃음 횟수</h2>
+        <h3 class="smile_total_number"><%=user.smile_today %>회</h3>
+      </div>
+      <div class="smile_today">
+        <h2>오늘 웃음 횟수</h2>
+        <progress class="smile_today_progress" value= <%=user.smile_today %> max="14"></progress><h3 class="smile_today_number"><%=user.smile_today %>회</h3>
+      </div>
+        
+    </div>
+    
+</body>
+</html>

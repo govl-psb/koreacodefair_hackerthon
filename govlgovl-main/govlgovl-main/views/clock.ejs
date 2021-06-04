@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcom</title>
+    <%- include ("./head.ejs") %>
+    <link rel="stylesheet" href="../public/clock.css" />
+    <link rel="stylesheet" href="../public/home.css">
+</head>
+<body>
+  <%- include ("./nav.ejs") %>
+  <div class="welcom">
+    <div class="clock">
+      <img class="clock_img" src="../public/image/clock.png" alt="">
+        <img class="clock_dot_img" src="../public/image/clock_dot.png" alt=""></img>
+        <div class="hour">
+          <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+          <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+          <div class="sc" id="sc"></div>
+        </div>
+      </img>      
+    </div>
+    <div class="introduction">
+      <h1 class="title">Welcom to Ejun Park's profile webpage</h1>
+      <div class="description">
+        <h3 class="hello"> Hello, I am Ejun, a student who wants to be a programmer. I started to study programming with C and now I can do much more things. If you'de like to know more about me, check this website.</h3>
+      </div>
+    </div>
+  </div>
+  <div class="about_background">
+  <div class="about">
+    <img class="code_img"src="../public/image/code.png" alt="">
+    <div class="about_info_con">
+      <h1 class="name">Ejun Park</h1>
+      <ul class="about_info">
+        <li>Email jjoonleo@gmail.com</li>
+        <li>Region Korea</li>
+        <li>Age 16</li>
+        <li><a href="https://github.com/jjoonleo">My github</a></li>
+      </ul>
+      <a href="/profile" class="more_me">more about me</a>
+    </div>
+  </div>
+  </div>
+  <div class="languages">
+    <h1>Things that I am learning</h1>
+    <h3></h3>
+    <div class="languages_icons">
+      <img class="C_C++" src="../public/image/C_C++.png" alt="">
+      <img class="android" src="../public/image/android.png" alt="">
+      <img class="python" src="../public/image/python.webp" alt="">
+      <img class="web_front" src="../public/image/web_front2.png" alt="">
+      <img class="nodejs" src="../public/image/nodejs.png" alt="">
+      <img class="mysql" src="../public/image/mysql.png" alt="">
+      <img class="react" src="../public/image/react.png" alt="">
+      <img class="arduino" src="../public/image/arduino.png" alt="">
+
+    </div>
+  </div>
+  
+<script type="text/javascript">
+          const deg = 6;
+          const hr = document.querySelector("#hr");
+          const mn = document.querySelector("#mn");
+          const sc = document.querySelector("#sc");
+          const clock = document.querySelector(".clock");
+          const clock_sec = document.querySelector(".clock .sec");
+          const clock_sec_sc = document.querySelector(".clock .sec .sc");
+          const clock_min = document.querySelector(".clock .min");
+          const clock_min_mn = document.querySelector(".clock .min .mn");
+          const clock_hour = document.querySelector(".clock .hour");
+          const clock_hour_hr = document.querySelector(".clock .hour .hr");
+          const clock_img = document.querySelector(".clock_img");
+          const clock_dot_img = document.querySelector(".clock_dot_img");
+          
+          function setDivHeight()
+          {
+            clock.style.height = clock.offsetWidth +"px";
+            clock_sec.style.height = clock.offsetWidth +"px";
+            clock_sec.style.width = clock.offsetWidth +"px";
+            clock_sec_sc.style.width = clock.offsetWidth*80/100 +"px";
+            clock_sec_sc.style.height = clock.offsetWidth*80/100 +"px";
+            clock_sec_sc.style.margin = clock.offsetWidth*10/100 + "px";
+            clock_min.style.height = clock.offsetWidth +"px";
+            clock_min.style.width = clock.offsetWidth +"px";
+            clock_min_mn.style.width = clock.offsetWidth*70/100 +"px";
+            clock_min_mn.style.height = clock.offsetWidth*70/100 +"px";
+            clock_min_mn.style.margin = clock.offsetWidth*15/100 + "px";
+            clock_hour.style.height = clock.offsetWidth +"px";
+            clock_hour.style.width = clock.offsetWidth +"px";
+            clock_hour_hr.style.width = clock.offsetWidth*50/100 +"px";
+            clock_hour_hr.style.height = clock.offsetWidth*50/100 +"px";
+            clock_hour_hr.style.margin = clock.offsetWidth*25/100 + "px";
+            
+            clock_img.style.height = clock.offsetWidth +"px";
+            clock_dot_img.style.height = clock.offsetWidth + "px";
+          }
+
+    
+          setInterval(() => {
+            let day = new Date();
+            let hh = day.getHours() * 30;
+            let mm = day.getMinutes() * deg;
+            let ss = day.getSeconds() * deg;
+    
+            hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+            mn.style.transform = `rotateZ(${mm}deg)`;
+            sc.style.transform = `rotateZ(${ss}deg)`;
+
+            setDivHeight();
+          });
+</script>
+</body>
+</html>

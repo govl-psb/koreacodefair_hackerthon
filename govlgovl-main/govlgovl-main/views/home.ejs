@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Cam Video</title>
+    <script
+      src="https://kit.fontawesome.com/1a2b716621.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>   
+    <script src="./public/javascripts/video.js" defer></script>
+    <link rel="stylesheet" href="./public/stylesheets/main.css">
+</head>
+<body>
+    <h1 class="yesOrNo">
+        사진을 찍으세요
+    </h1>
+    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+    <canvas id="canvas" class="d-none"></canvas>
+    <button id="snap" class="snap"><img src="./public/img/compact-camera.png" alt=""></button>
+</body>
+
+</html>

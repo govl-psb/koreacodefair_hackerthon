@@ -1,0 +1,116 @@
+.about_background {
+  background: #151515;
+  padding: 50px 100px;
+}
+.about {
+  display: flex;
+  background: #202020;
+}
+.code_img {
+  width: 50%;
+  height: 100%;
+}
+.about_info_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.about_info_con * {
+  text-align: center;
+}
+.name {
+  margin: 20px;
+}
+.about_info {
+  list-style: none;
+  padding: 0;
+  color: #ddd;
+  margin: 0;
+}
+.more_me {
+  margin: 20px;
+  color: #d8ba9c;
+}
+.more_me:hover {
+  color: rgb(50, 50, 50);
+}
+.languages {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.languages_icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20%;
+}
+.languages_icons * {
+  width: 25%;
+}
+
+.languages_icons .android {
+  width: 15%;
+  padding: 4%;
+  padding-right: 2%;
+}
+.languages_icons .python {
+  width: 15%;
+  padding: 4%;
+  padding-left: 2%;
+}
+
+@media screen and (max-width: 900px) {
+  .languages_icons * {
+    width: 30%;
+  }
+
+  .languages_icons .android {
+    width: 22%;
+    padding: 4%;
+    padding-right: 2%;
+  }
+  .languages_icons .python {
+    width: 22%;
+    padding: 4%;
+    padding-left: 2%;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .code_img {
+    width: 100%;
+    height: 50%;
+  }
+  .about_info_con {
+    margin: 10%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .languages_icons * {
+    width: 50%;
+  }
+
+  .languages_icons .android {
+    width: 42%;
+    padding: 4%;
+    padding-right: 2%;
+  }
+  .languages_icons .python {
+    width: 42%;
+    padding: 4%;
+    padding-left: 2%;
+  }
+  .about_info_con {
+    margin: 0;
+  }
+  .about_background {
+    padding: 35px 50px;
+  }
+}

@@ -1,0 +1,25 @@
+
+<nav class="navbar">
+  
+    <div class="navbar_logo">
+      <a href="/">Ejun Park</a>
+    </div>
+  
+    <ul class="navbar_menu">
+      <li><a href="../public/404.html">Business card</a></li>
+      <li><a href="/profile">About</a></li>
+      <li><a href="../public/404.html">portfolio</a></li>
+    </ul>
+  
+    <ul class="navbar_icon">
+      <% if (!user) { %>
+      <a href="/login">login</a>
+      <% }else{ %>
+      <a href="/logout">logout</a>
+      <% } %>
+    </ul>
+  
+    <a href="#" class="navbar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+  </nav>
